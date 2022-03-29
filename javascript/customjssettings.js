@@ -51,8 +51,6 @@ function hideBlocks() {
     }
 }
 
-
-
 function checkCookieState() {
     var cookieValue = document.cookie;
     var cookieArray = cookieValue.split(';');

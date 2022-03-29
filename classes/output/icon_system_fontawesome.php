@@ -15,17 +15,36 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * classic_var_01 theme.
+ * Overridden fontawesome icons.
  *
- * @package    theme_classic_var_01
- * @copyright  2018 Bas Brands
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package     theme_classic_var_01
+ * @copyright   2019 Moodle
+ * @author      Bas Brands <bas@moodle.com>
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+namespace theme_classic_var_01\output;
 
-// This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2021051700;
-$plugin->requires = 2021051100;
-$plugin->component = 'theme_classic_var_01';
-$plugin->dependencies = array('theme_boost' => 2021051100);
+/**
+ * Class overriding some of the Moodle default FontAwesome icons.
+ *
+ * @package    theme_classic_var_01
+ * @copyright  2019 Moodle
+ * @author     Bas Brands <bas@moodle.com>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class icon_system_fontawesome extends \core\output\icon_system_fontawesome {
+    /**
+     * Change the core icon map.
+     *
+     * @return Array replaced icons.
+     */
+    public function get_core_icon_map() {
+        $iconmap = parent::get_core_icon_map();
+
+        $iconmap['core:i/navigationitem'] = 'fa-square';
+
+        return $iconmap;
+    }
+}

@@ -46,15 +46,17 @@
         "haspostblocks":true
     }
 }}
-{{> theme_boost/head }}
+{{> theme_classic_var_01/head }}
 
 <body {{{ bodyattributes }}}>
 
-<div id="page-wrapper">
+<div id="page-wrapper" class="d-print-block">
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{>theme_classic_var_01/navbar}}
+    {{>theme_classic_var_01/navbar}}  
+    
+    <div id="page" name="3col" class="container-fluid d-print-block"> 
     
                    {{{ output.full_header }}}
                 <!-- ADDITIONAL BLOCK START -->
@@ -65,9 +67,9 @@
                 {{/hastopfullwidth}}
                 <!-- ADDITIONAL BLOCK END -->
 
-    <div id="page" name="3col" class="container-fluid">   
+          
 
-        <div id="page-content" class="row {{#haspreblocks}} blocks-pre {{/haspreblocks}} {{#haspostblocks}} blocks-post {{/haspostblocks}}">
+        <div id="page-content" class="row {{#haspreblocks}} blocks-pre {{/haspreblocks}} {{#haspostblocks}} blocks-post {{/haspostblocks}} d-print-block">
             <div id="region-main-box" class="region-main">
                 {{#hasregionmainsettingsmenu}}
                 <div id="region-main-settings-menu" class="d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
@@ -82,8 +84,8 @@
                             {{{ upperfullwidthblocks }}}
                         </section>
                         {{/hasupperfullwidth}}
-                        <!-- ADDITIONAL BLOCK END -->                   
-                    
+                        <!-- ADDITIONAL BLOCK END -->             
+                                        
                     {{#hasregionmainsettingsmenu}}
                         <div class="region_main_settings_menu_proxy"></div>
                     {{/hasregionmainsettingsmenu}}
@@ -98,32 +100,32 @@
                             {{{ lowerfullwidthblocks }}}
                         </section>
                         {{/haslowerfullwidth}}
-                        <!-- ADDITIONAL BLOCK END -->                   
+                        <!-- ADDITIONAL BLOCK END -->
                     
                 </section>
             </div>
             <div class="columnleft blockcolumn {{#haspreblocks}} has-blocks {{/haspreblocks}}">
-                <section data-region="blocks-column" class="hidden-print" aria-label="{{#str}}blocks{{/str}}">
+                <section data-region="blocks-column" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
                     {{{ sidepreblocks }}}
                 </section>
             </div>
 
             <div class="columnright blockcolumn {{#haspostblocks}} has-blocks {{/haspostblocks}}">
-                <section data-region="blocks-column" class="hidden-print" aria-label="{{#str}}blocks{{/str}}">
+                <section data-region="blocks-column" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
                     {{{ sidepostblocks }}}
                 </section>
             </div>
         </div>
     </div>
     {{{ output.standard_after_main_region_html }}}
-    {{> theme_boost/footer }}
+    {{> theme_classic_var_01/footer }}
 </div>
 
 </body>
 </html>
 {{#js}}
-M.util.js_pending('theme_boost/loader');
+M.util.js_pending('theme_boost_var_01/loader');
 require(['theme_boost/loader'], function() {
-  M.util.js_complete('theme_boost/loader');
+    M.util.js_complete('theme_boost/loader');
 });
 {{/js}}

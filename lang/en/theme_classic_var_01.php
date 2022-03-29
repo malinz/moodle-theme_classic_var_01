@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 // Raw SCSS setting.
-$string['choosereadme'] = 'Classic Var 01 is a highly-customisable theme, based on Boost, with an alternative navigation layout. This theme is intended to be used directly, or as a parent theme when creating or updating custom themes to utilise Bootstrap 4.';
+$string['choosereadme'] = 'classic_var_01 is a highly-customisable theme, based on Boost, with an alternative navigation layout. This theme is intended to be used directly, or as a parent theme when creating or updating custom themes to utilise Bootstrap 4.';
 $string['configtitle'] = 'Classic Var 01';
 $string['navbardark'] = 'Use a dark style navbar';
 $string['navbardarkdesc'] = 'Swaps text and background colours for the navbar at the top of the page between dark and light.';
@@ -48,6 +48,7 @@ $string['region-upper-fullwidth'] = 'Above Sections';
 $string['region-lower-fullwidth'] = 'Below Sections';
 //Bottom block region
 $string['region-bottom-fullwidth'] = 'Above Footer';
+
 $string['sitetitle'] = 'Site title';
 $string['privacy:metadata'] = 'The classic_var_01 theme does not store any personal data.';
 

@@ -51,8 +51,7 @@ if ($ADMIN->fulltree) {
     }
 
     // These are the built in presets.
-    
-    $choices['default.scss'] = 'default.scss'; 
+    $choices['default.scss'] = 'default.scss';
     $choices['unitec-00.scss'] = 'unitec-00.scss';
     $choices['unitec-01.scss'] = 'unitec-01.scss';
     $choices['unitec-02.scss'] = 'unitec-02.scss';
@@ -69,7 +68,7 @@ if ($ADMIN->fulltree) {
     $choices['swift.scss'] = 'swift.scss';
     $choices['plain.scss'] = 'plain.scss';
 
-    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting = new admin_setting_configthemepreset($name, $title, $description, $default, $choices, 'classic_var_01');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 

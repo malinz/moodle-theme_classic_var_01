@@ -27,9 +27,13 @@ defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'classic_var_01';
 
+// retain this line to retain branding settings
 $THEME->sheets = [];
-//$THEME->sheets = array('default', 'plain', 'unitec-blue', 'unitec-default', 'unitec-green');
 
+//add addtional css sheets here
+$THEME->sheets = array('legacy');
+
+// additional javascript - note: this does not work in Boost
 $THEME->javascripts_footer = array('customjssettings');
 
 $THEME->layouts = [
@@ -159,3 +163,4 @@ $THEME->scss = function($theme) {
     return theme_classic_var_01_get_main_scss_content($theme);
 };
 $THEME->usefallback = true;
+$THEME->iconsystem = '\\theme_classic_var_01\\output\\icon_system_fontawesome';

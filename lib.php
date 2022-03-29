@@ -37,8 +37,7 @@ function theme_classic_var_01_get_main_scss_content($theme) {
     $scss = '';
     $filename = !empty($theme->settings->preset) ? $theme->settings->preset : null;
     $fs = get_file_storage();
-    
-    
+
     $context = context_system::instance();
     $scss .= file_get_contents($CFG->dirroot . '/theme/classic_var_01/scss/classic/pre.scss');
     if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_classic_var_01', 'preset', 0, '/', $filename))) {
@@ -79,7 +78,6 @@ function theme_classic_var_01_get_main_scss_content($theme) {
 
     return $scss;
 }
-
 
 /**
  * Get SCSS to prepend.
@@ -128,15 +126,15 @@ function theme_classic_var_01_get_extra_scss($theme) {
     if (!empty($imageurl)) {
         $content .= '$imageurl: "' . $imageurl . '";';
         $content .= file_get_contents($CFG->dirroot .
-            '/theme/classic_var_01/scss/classic/body-background.scss');
+            '/theme/classic_var_01/scss/classic_var_01/body-background.scss');
     }
 
     if (!empty($theme->settings->navbardark)) {
         $content .= file_get_contents($CFG->dirroot .
-            '/theme/classic_var_01/scss/classic/navbar-dark.scss');
+            '/theme/classic_var_01/scss/classic_var_01/navbar-dark.scss');
     } else {
         $content .= file_get_contents($CFG->dirroot .
-            '/theme/classic_var_01/scss/classic/navbar-light.scss');
+            '/theme/classic_var_01/scss/classic_var_01/navbar-light.scss');
     }
     if (!empty($theme->settings->scss)) {
         $content .= $theme->settings->scss;
