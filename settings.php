@@ -52,6 +52,8 @@ if ($ADMIN->fulltree) {
 
     // These are the built in presets.
     $choices['default.scss'] = 'default.scss';
+    $choices['UnitecTePukengaDark.scss'] = 'UnitecTePukengaDark.scss';
+    $choices['UnitecTePukengaLight.scss'] = 'UnitecTePukengaLight.scss';
     $choices['unitec-00.scss'] = 'unitec-00.scss';
     $choices['unitec-01.scss'] = 'unitec-01.scss';
     $choices['unitec-02.scss'] = 'unitec-02.scss';
